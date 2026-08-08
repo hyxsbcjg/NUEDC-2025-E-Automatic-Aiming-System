@@ -1,0 +1,28 @@
+# Keil build outputs
+Objects/
+Listings/
+DebugConfig/
+*.axf
+*.bin
+*.build_log.htm
+*.d
+*.dep
+*.hex
+*.htm
+*.lnp
+*.lst
+*.map
+*.o
+*.sct.bak
+*.uvguix.*
+*.uvoptx
+build-output.txt
+JLink*
+
+# IDE and OS files
+.metadata/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+*.log
