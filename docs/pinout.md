@@ -5,11 +5,18 @@
 ## STM32F103RC
 
 - K230 USART1：`PA9` TX、`PA10` RX，115200、8N1。
-- 调试 USART3：源码初始化的调试串口，具体复用请以 `Hardware/USART3.c` 为准。
+- 调试 USART3：`PB10` TX、`PB11` RX，115200；实现位于 `Hardware/Serial.c`。
 - X/Y 步进电机通道：UART4 `PC10` TX、`PC11` RX；UART5 `PC12` TX、`PD2` RX，均为 115200。
 - 辅助 USART2：`PA2` TX、`PA3` RX，38400。
 - 按键：`PC7`、`PC8`、`PC9`、`PA8`。
 - 激光/继电器控制：`PC15`。
+
+## CanMV K230
+
+- STM32 通信 UART2：GPIO11 TX、GPIO12 RX，115200、8N1。
+- 校准按键：GPIO53，下拉输入，按下为高电平。
+- 连接关系：K230 GPIO11 TX → STM32 `PA10` RX；K230 GPIO12 RX ← STM32 `PA9` TX；两板 GND 相连。
+- 主用脚本使用 ST7701 显示和 320×240 RGB565 相机画面；具体相机与屏幕接口由开发板定义。
 
 ## MSPM0G3507
 
